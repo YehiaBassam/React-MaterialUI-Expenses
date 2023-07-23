@@ -10,9 +10,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import { Brightness7, Home, Create } from '@mui/icons-material';
+import { Brightness7, Brightness4, Home, Create } from '@mui/icons-material';
 // import { Brightness7, Home, Create, Person, Settings, Logout } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
+import { useTheme } from '@emotion/react';
 
 const drawerWidth = 240;
 const drawerItems = [
@@ -26,12 +27,13 @@ const drawerItems = [
 const Sidebar = (props) => {
   const { window } = props;
   const navigate = useNavigate();
+  const theme = useTheme();
 
   const drawer = (
     <div>
       <Toolbar >
-        <IconButton color='warning' sx={{margin: 'auto'}} aria-label="light dark mode">
-          <Brightness7 />
+        <IconButton sx={{ margin: 'auto' }} onClick={() => props.changeMode()} color={ theme.palette.mode === 'dark' ? 'neutral' : 'warning'}>
+          {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
         </IconButton>
       </Toolbar>
       <Divider />
