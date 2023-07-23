@@ -10,16 +10,17 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import { Brightness7, Home, Create, Person, Settings, Logout } from '@mui/icons-material';
+import { Brightness7, Home, Create } from '@mui/icons-material';
+// import { Brightness7, Home, Create, Person, Settings, Logout } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const drawerItems = [
   {name: 'Home', icon: <Home />, link: ''},
   {name: 'Create', icon: <Create />, link: 'create'},
-  {name: 'Profile', icon: <Person />, link: 'profile'},
-  {name: 'Settings', icon: <Settings />, link: 'settings'},
-  {name: 'Logout', icon: <Logout />, link: 'logout'},
+  // {name: 'Profile', icon: <Person />, link: 'profile'},
+  // {name: 'Settings', icon: <Settings />, link: 'settings'},
+  // {name: 'Logout', icon: <Logout />, link: 'logout'},
 ]
 
 const Sidebar = (props) => {

@@ -14,11 +14,10 @@ const MainLayout = ({ children }) => {
     <>
       <Header drawerWidth={240} handleDrawerToggle={handleDrawerToggle} />
       <Sidebar isMobileOpen={mobileOpen} closeDrawer={handleDrawerToggle} />
-      <Box sx={{ width: { sm: `calc(100% - ${240}px)` }, ml: { xs: '20px', sm: '260px' }, mt: '15px'}}>
+      <Box sx={{ width: { sm: `calc(100% - ${280}px)` }, ml: { xs: '20px', sm: '260px' }, mt: '15px'}}>
         {/* {children} // in react-router-dom V5 */}
         <Outlet />
       </Box>
-      <div>footer</div>
     </>
   );
 };
