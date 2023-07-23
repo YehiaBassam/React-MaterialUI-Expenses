@@ -1,23 +1,20 @@
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MainLayout from "./pages/Layout/MainLayout";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
     <>
-      <MainLayout>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/Create">
-            <Create />
-          </Route>
-        </Switch>
-      </MainLayout>
+      <Routes>
+        <Route path='/' element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path='create' element={<Create />} />
+          {/* <Route path='*' element={<Notfound/>} /> */}
+        </Route>
+      </Routes>
     </>
   );
 };
 
-export default Routes;
+export default AppRoutes;
